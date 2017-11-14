@@ -269,6 +269,7 @@ class Model(object):
                 collector.add_import(constraint)
 
         for index in self.table.indexes:
+            print(index.dialect_options)
             if len(index.columns) > 1:
                 collector.add_import(index)
 
